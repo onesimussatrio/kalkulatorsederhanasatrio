@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+
+<script>
+    let angka1 = Number(prompt("Masukkan angka pertama:"));
+    let operator = prompt("Masukkan operator (+, -, *, /):");
+    let angka2 = Number(prompt("Masukkan angka kedua:"));
+
+    let hasil;
+
+    if (operator === "+") {
+        hasil = angka1 + angka2;
+    } else if (operator === "-") {
+        hasil = angka1 - angka2;
+    } else if (operator === "*") {
+        hasil = angka1 * angka2;
+    } else if (operator === "/") {
+        if (angka2 === 0) {
+            alert("Error: Tidak bisa membagi dengan nol!");
+        } else {
+            hasil = angka1 / angka2;
+        }
+    } else {
+        alert("Operator tidak valid!");
+    }
+
+    if (hasil !== undefined) {
+        alert("Hasil: " + angka1 + " " + operator
+              + " " + angka2 + " = " + hasil);
+    }
+</script>
+</body>
+</html>
